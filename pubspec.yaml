@@ -1,0 +1,40 @@
+
+name: eco_tracker
+description: "A food CO₂ emission tracking application with Flutter"
+
+# Prevents the project from being published to pub.dev
+publish_to: 'none'
+
+# Application version
+version: 1.0.0+1
+
+# Dart SDK version
+environment:
+  sdk: ^3.13.5
+
+# Packages used by the application
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.2.0
+
+  # iOS-style icons
+  cupertino_icons: ^1.0.8
+
+# Packages used for testing and code quality
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+# Flutter configuration
+flutter:
+
+  # Enables Material Design icons
+  uses-material-design: true
+
+  # Local product database
+  assets:
+    - assets/products.json
+    - assets/images/concitologo.svg
