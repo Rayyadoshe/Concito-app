@@ -1,0 +1,625 @@
+[
+  {
+    "id": "recipe_001",
+    "slug": "chickpea_curry",
+    "name": "Creamy Chickpea Curry",
+    "description": "Tomato and chickpea curry with spinach and rice.",
+    "servings": 2,
+    "prepTimeMinutes": 30,
+    "image": "assets/images/recipes/chickpea_curry.png",
+    "ingredients": [
+      {
+        "productId": "Ra00413",
+        "productName": "Chickpeas, canned",
+        "grams": 240,
+        "emissionsKg": 0.276
+      },
+      {
+        "productId": "Ra00002",
+        "productName": "Tomato, ripe, raw, origin unknown",
+        "grams": 250,
+        "emissionsKg": 0.12
+      },
+      {
+        "productId": "Ra00266",
+        "productName": "Onion, raw",
+        "grams": 100,
+        "emissionsKg": 0.027
+      },
+      {
+        "productId": "Ra00161",
+        "productName": "Spinach, raw",
+        "grams": 80,
+        "emissionsKg": 0.0384
+      },
+      {
+        "productId": "Ra00300",
+        "productName": "Rice, parboiled, raw",
+        "grams": 120,
+        "emissionsKg": 0.6072
+      },
+      {
+        "productId": "Ra00136",
+        "productName": "Garlic, raw",
+        "grams": 10,
+        "emissionsKg": 0.0125
+      },
+      {
+        "productId": "Ra00348",
+        "productName": "Sunflower oil",
+        "grams": 15,
+        "emissionsKg": 0.0418
+      }
+    ],
+    "instructions": [
+      "Cook the dry rice according to its packet.",
+      "Dice onion and garlic; soften in oil.",
+      "Add chopped tomatoes and simmer until saucy.",
+      "Add drained chickpeas and spinach; cook until hot.",
+      "Season to taste and serve with rice."
+    ],
+    "totalEmissionsKg": 1.1229,
+    "emissionsPerServingKg": 0.5615,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  },
+  {
+    "id": "recipe_002",
+    "slug": "lentil_bolognese",
+    "name": "Lentil Bolognese",
+    "description": "Hearty lentil and tomato sauce over pasta.",
+    "servings": 4,
+    "prepTimeMinutes": 35,
+    "image": "assets/images/recipes/lentil_bolognese.png",
+    "ingredients": [
+      {
+        "productId": "Ra00174",
+        "productName": "Green lentils, dried",
+        "grams": 180,
+        "emissionsKg": 0.5544
+      },
+      {
+        "productId": "Ra00234",
+        "productName": "Pasta, raw",
+        "grams": 280,
+        "emissionsKg": 0.574
+      },
+      {
+        "productId": "Ra00002",
+        "productName": "Tomato, ripe, raw, origin unknown",
+        "grams": 450,
+        "emissionsKg": 0.216
+      },
+      {
+        "productId": "Ra00257",
+        "productName": "Carrot, raw",
+        "grams": 160,
+        "emissionsKg": 0.0432
+      },
+      {
+        "productId": "Ra00266",
+        "productName": "Onion, raw",
+        "grams": 120,
+        "emissionsKg": 0.0324
+      },
+      {
+        "productId": "Ra00136",
+        "productName": "Garlic, raw",
+        "grams": 12,
+        "emissionsKg": 0.015
+      },
+      {
+        "productId": "Ra00349",
+        "productName": "Olive oil",
+        "grams": 20,
+        "emissionsKg": 0.1178
+      }
+    ],
+    "instructions": [
+      "Simmer lentils in water until tender.",
+      "Boil pasta according to package directions.",
+      "Sauté chopped onion, carrot and garlic in oil.",
+      "Add chopped tomatoes and cooked lentils; simmer 10 minutes.",
+      "Toss with pasta and season to taste."
+    ],
+    "totalEmissionsKg": 1.5528,
+    "emissionsPerServingKg": 0.3882,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  },
+  {
+    "id": "recipe_003",
+    "slug": "roasted_vegetable_bulgur",
+    "name": "Roasted Vegetable Bulgur",
+    "description": "Warm bulgur with roasted vegetables, chickpeas and lemon.",
+    "servings": 2,
+    "prepTimeMinutes": 30,
+    "image": "assets/images/recipes/roasted_vegetable_bulgur.png",
+    "ingredients": [
+      {
+        "productId": "Ra00298",
+        "productName": "Bulgur, parboiled, raw",
+        "grams": 140,
+        "emissionsKg": 0.2618
+      },
+      {
+        "productId": "Ra00003",
+        "productName": "Squash, raw",
+        "grams": 200,
+        "emissionsKg": 0.168
+      },
+      {
+        "productId": "Ra00001",
+        "productName": "Pepper, sweet, red, raw",
+        "grams": 160,
+        "emissionsKg": 0.1712
+      },
+      {
+        "productId": "Ra00257",
+        "productName": "Carrot, raw",
+        "grams": 150,
+        "emissionsKg": 0.0405
+      },
+      {
+        "productId": "Ra00413",
+        "productName": "Chickpeas, canned",
+        "grams": 160,
+        "emissionsKg": 0.184
+      },
+      {
+        "productId": "Ra00328",
+        "productName": "Lemon, raw",
+        "grams": 50,
+        "emissionsKg": 0.0335
+      },
+      {
+        "productId": "Ra00349",
+        "productName": "Olive oil",
+        "grams": 20,
+        "emissionsKg": 0.1178
+      }
+    ],
+    "instructions": [
+      "Roast chopped squash, pepper and carrot with oil until tender.",
+      "Prepare bulgur following the packet.",
+      "Drain chickpeas and warm with the vegetables.",
+      "Mix everything and finish with lemon juice."
+    ],
+    "totalEmissionsKg": 0.9768,
+    "emissionsPerServingKg": 0.4884,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  },
+  {
+    "id": "recipe_004",
+    "slug": "potato_black_bean_tacos",
+    "name": "Potato & Black Bean Tacos",
+    "description": "Soft tortillas filled with spiced potatoes, beans and crunchy cabbage.",
+    "servings": 3,
+    "prepTimeMinutes": 35,
+    "image": "assets/images/recipes/potato_black_bean_tacos.png",
+    "ingredients": [
+      {
+        "productId": "Ra00256",
+        "productName": "Potato, raw",
+        "grams": 450,
+        "emissionsKg": 0.1845
+      },
+      {
+        "productId": "Ra00439",
+        "productName": "Black beans",
+        "grams": 240,
+        "emissionsKg": 0.2808
+      },
+      {
+        "productId": "Ra00401",
+        "productName": "Tortilla bread, wheat",
+        "grams": 180,
+        "emissionsKg": 0.2088
+      },
+      {
+        "productId": "Ra00159",
+        "productName": "Cabbage, red, raw",
+        "grams": 120,
+        "emissionsKg": 0.0348
+      },
+      {
+        "productId": "Ra00317",
+        "productName": "Avocado, raw",
+        "grams": 100,
+        "emissionsKg": 0.122
+      },
+      {
+        "productId": "Ra00332",
+        "productName": "Lime, raw",
+        "grams": 50,
+        "emissionsKg": 0.03
+      },
+      {
+        "productId": "Ra00348",
+        "productName": "Sunflower oil",
+        "grams": 15,
+        "emissionsKg": 0.0418
+      }
+    ],
+    "instructions": [
+      "Dice potatoes and roast with oil until tender.",
+      "Warm the black beans and tortillas.",
+      "Shred cabbage and slice avocado.",
+      "Fill tortillas with potatoes, beans and vegetables.",
+      "Finish with lime juice and seasonings."
+    ],
+    "totalEmissionsKg": 0.9027,
+    "emissionsPerServingKg": 0.3009,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  },
+  {
+    "id": "recipe_005",
+    "slug": "mushroom_spinach_risotto",
+    "name": "Mushroom & Spinach Risotto",
+    "description": "Creamy mushroom rice with spinach and onions.",
+    "servings": 2,
+    "prepTimeMinutes": 40,
+    "image": "assets/images/recipes/mushroom_spinach_risotto.png",
+    "ingredients": [
+      {
+        "productId": "Ra00300",
+        "productName": "Rice, parboiled, raw",
+        "grams": 160,
+        "emissionsKg": 0.8096
+      },
+      {
+        "productId": "Ra00207",
+        "productName": "Mushroom, raw",
+        "grams": 250,
+        "emissionsKg": 0.095
+      },
+      {
+        "productId": "Ra00161",
+        "productName": "Spinach, raw",
+        "grams": 100,
+        "emissionsKg": 0.048
+      },
+      {
+        "productId": "Ra00266",
+        "productName": "Onion, raw",
+        "grams": 120,
+        "emissionsKg": 0.0324
+      },
+      {
+        "productId": "Ra00136",
+        "productName": "Garlic, raw",
+        "grams": 10,
+        "emissionsKg": 0.0125
+      },
+      {
+        "productId": "Ra00349",
+        "productName": "Olive oil",
+        "grams": 20,
+        "emissionsKg": 0.1178
+      }
+    ],
+    "instructions": [
+      "Sauté onion, garlic and mushrooms in oil.",
+      "Add rice and gradually add hot water while stirring.",
+      "Cook until the rice is tender, adding water as needed.",
+      "Fold in spinach until wilted and season."
+    ],
+    "totalEmissionsKg": 1.1153,
+    "emissionsPerServingKg": 0.5576,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  },
+  {
+    "id": "recipe_006",
+    "slug": "two_bean_chili",
+    "name": "Two-Bean Chili",
+    "description": "Comforting tomato chili with kidney and black beans.",
+    "servings": 4,
+    "prepTimeMinutes": 35,
+    "image": "assets/images/recipes/two_bean_chili.png",
+    "ingredients": [
+      {
+        "productId": "Ra00422",
+        "productName": "Kidney beans",
+        "grams": 300,
+        "emissionsKg": 0.351
+      },
+      {
+        "productId": "Ra00439",
+        "productName": "Black beans",
+        "grams": 300,
+        "emissionsKg": 0.351
+      },
+      {
+        "productId": "Ra00002",
+        "productName": "Tomato, ripe, raw, origin unknown",
+        "grams": 500,
+        "emissionsKg": 0.24
+      },
+      {
+        "productId": "Ra00266",
+        "productName": "Onion, raw",
+        "grams": 150,
+        "emissionsKg": 0.0405
+      },
+      {
+        "productId": "Ra00001",
+        "productName": "Pepper, sweet, red, raw",
+        "grams": 180,
+        "emissionsKg": 0.1926
+      },
+      {
+        "productId": "Ra00257",
+        "productName": "Carrot, raw",
+        "grams": 120,
+        "emissionsKg": 0.0324
+      },
+      {
+        "productId": "Ra00136",
+        "productName": "Garlic, raw",
+        "grams": 12,
+        "emissionsKg": 0.015
+      },
+      {
+        "productId": "Ra00348",
+        "productName": "Sunflower oil",
+        "grams": 20,
+        "emissionsKg": 0.0558
+      }
+    ],
+    "instructions": [
+      "Chop onion, pepper, carrot and garlic.",
+      "Cook vegetables in oil until softened.",
+      "Add chopped tomatoes and both types of beans.",
+      "Simmer 20 minutes; season with chili and spices to taste."
+    ],
+    "totalEmissionsKg": 1.2783,
+    "emissionsPerServingKg": 0.3196,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  },
+  {
+    "id": "recipe_007",
+    "slug": "tofu_vegetable_stir_fry",
+    "name": "Tofu & Vegetable Stir-Fry",
+    "description": "Crisp vegetables and tofu served over rice.",
+    "servings": 2,
+    "prepTimeMinutes": 25,
+    "image": "assets/images/recipes/tofu_vegetable_stir_fry.png",
+    "ingredients": [
+      {
+        "productId": "Ra00353",
+        "productName": "Tofu, soy bean curd",
+        "grams": 250,
+        "emissionsKg": 0.5225
+      },
+      {
+        "productId": "Ra00155",
+        "productName": "Broccoli, raw",
+        "grams": 250,
+        "emissionsKg": 0.1575
+      },
+      {
+        "productId": "Ra00257",
+        "productName": "Carrot, raw",
+        "grams": 160,
+        "emissionsKg": 0.0432
+      },
+      {
+        "productId": "Ra00001",
+        "productName": "Pepper, sweet, red, raw",
+        "grams": 160,
+        "emissionsKg": 0.1712
+      },
+      {
+        "productId": "Ra00300",
+        "productName": "Rice, parboiled, raw",
+        "grams": 120,
+        "emissionsKg": 0.6072
+      },
+      {
+        "productId": "Ra00136",
+        "productName": "Garlic, raw",
+        "grams": 12,
+        "emissionsKg": 0.015
+      },
+      {
+        "productId": "Ra00348",
+        "productName": "Sunflower oil",
+        "grams": 15,
+        "emissionsKg": 0.0418
+      }
+    ],
+    "instructions": [
+      "Cook the rice.",
+      "Cut tofu into cubes and brown in a little oil.",
+      "Stir-fry broccoli, carrots, pepper and garlic.",
+      "Combine tofu and vegetables, season, and serve with rice."
+    ],
+    "totalEmissionsKg": 1.5584,
+    "emissionsPerServingKg": 0.7792,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  },
+  {
+    "id": "recipe_008",
+    "slug": "red_lentil_carrot_soup",
+    "name": "Red Lentil & Carrot Soup",
+    "description": "Warming red lentil soup with carrot and garlic.",
+    "servings": 3,
+    "prepTimeMinutes": 30,
+    "image": "assets/images/recipes/red_lentil_carrot_soup.png",
+    "ingredients": [
+      {
+        "productId": "Ra00448",
+        "productName": "Red lentils, dried",
+        "grams": 220,
+        "emissionsKg": 0.6776
+      },
+      {
+        "productId": "Ra00257",
+        "productName": "Carrot, raw",
+        "grams": 300,
+        "emissionsKg": 0.081
+      },
+      {
+        "productId": "Ra00266",
+        "productName": "Onion, raw",
+        "grams": 150,
+        "emissionsKg": 0.0405
+      },
+      {
+        "productId": "Ra00136",
+        "productName": "Garlic, raw",
+        "grams": 12,
+        "emissionsKg": 0.015
+      },
+      {
+        "productId": "Ra00002",
+        "productName": "Tomato, ripe, raw, origin unknown",
+        "grams": 200,
+        "emissionsKg": 0.096
+      },
+      {
+        "productId": "Ra00349",
+        "productName": "Olive oil",
+        "grams": 15,
+        "emissionsKg": 0.0883
+      }
+    ],
+    "instructions": [
+      "Sauté chopped onion and garlic in oil.",
+      "Add diced carrots, tomatoes, lentils and water.",
+      "Simmer until lentils and carrots are soft.",
+      "Blend partially or fully; season and serve."
+    ],
+    "totalEmissionsKg": 0.9984,
+    "emissionsPerServingKg": 0.3328,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  },
+  {
+    "id": "recipe_009",
+    "slug": "mediterranean_quinoa_salad",
+    "name": "Mediterranean Quinoa Salad",
+    "description": "Fresh quinoa and chickpea salad with cucumber and lemon.",
+    "servings": 2,
+    "prepTimeMinutes": 20,
+    "image": "assets/images/recipes/mediterranean_quinoa_salad.png",
+    "ingredients": [
+      {
+        "productId": "Ra00301",
+        "productName": "Quinoa, black, raw",
+        "grams": 140,
+        "emissionsKg": 0.6482
+      },
+      {
+        "productId": "Ra00413",
+        "productName": "Chickpeas, canned",
+        "grams": 220,
+        "emissionsKg": 0.253
+      },
+      {
+        "productId": "Ra00007",
+        "productName": "Cucumber, raw",
+        "grams": 200,
+        "emissionsKg": 0.08
+      },
+      {
+        "productId": "Ra00002",
+        "productName": "Tomato, ripe, raw, origin unknown",
+        "grams": 200,
+        "emissionsKg": 0.096
+      },
+      {
+        "productId": "Ra00485",
+        "productName": "Red onion",
+        "grams": 70,
+        "emissionsKg": 0.0567
+      },
+      {
+        "productId": "Ra00328",
+        "productName": "Lemon, raw",
+        "grams": 50,
+        "emissionsKg": 0.0335
+      },
+      {
+        "productId": "Ra00349",
+        "productName": "Olive oil",
+        "grams": 15,
+        "emissionsKg": 0.0883
+      },
+      {
+        "productId": "Ra00134",
+        "productName": "Parsley, raw",
+        "grams": 15,
+        "emissionsKg": 0.0067
+      }
+    ],
+    "instructions": [
+      "Cook quinoa according to package directions and cool.",
+      "Drain chickpeas and dice vegetables.",
+      "Combine quinoa, chickpeas and vegetables.",
+      "Dress with lemon juice and olive oil; finish with parsley."
+    ],
+    "totalEmissionsKg": 1.2624,
+    "emissionsPerServingKg": 0.6312,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  },
+  {
+    "id": "recipe_010",
+    "slug": "loaded_baked_potatoes",
+    "name": "Loaded Baked Potatoes",
+    "description": "Oven-baked potatoes topped with broccoli, beans and herby yogurt.",
+    "servings": 3,
+    "prepTimeMinutes": 45,
+    "image": "assets/images/recipes/loaded_baked_potatoes.png",
+    "ingredients": [
+      {
+        "productId": "Ra00256",
+        "productName": "Potato, raw",
+        "grams": 750,
+        "emissionsKg": 0.3075
+      },
+      {
+        "productId": "Ra00155",
+        "productName": "Broccoli, raw",
+        "grams": 300,
+        "emissionsKg": 0.189
+      },
+      {
+        "productId": "Ra00422",
+        "productName": "Kidney beans",
+        "grams": 240,
+        "emissionsKg": 0.2808
+      },
+      {
+        "productId": "Ra00075",
+        "productName": "Yogurt plain, whole milk",
+        "grams": 120,
+        "emissionsKg": 0.0876
+      },
+      {
+        "productId": "Ra00136",
+        "productName": "Garlic, raw",
+        "grams": 8,
+        "emissionsKg": 0.01
+      },
+      {
+        "productId": "Ra00134",
+        "productName": "Parsley, raw",
+        "grams": 12,
+        "emissionsKg": 0.0054
+      },
+      {
+        "productId": "Ra00349",
+        "productName": "Olive oil",
+        "grams": 15,
+        "emissionsKg": 0.0883
+      }
+    ],
+    "instructions": [
+      "Bake scrubbed potatoes until tender.",
+      "Steam broccoli and warm the beans.",
+      "Mix yogurt with minced garlic and chopped parsley.",
+      "Split potatoes, add broccoli and beans, then top with dressing."
+    ],
+    "totalEmissionsKg": 0.9686,
+    "emissionsPerServingKg": 0.3229,
+    "emissionsMethod": "Sum of ingredient grams / 1000 × totalEmissions (kg CO2-eq/kg) from products.json. Ingredient quantities use dataset raw/canned/dried forms as named; cooking energy and unlisted seasonings excluded."
+  }
+]

@@ -20,6 +20,8 @@ dependencies:
 
   # iOS-style icons
   cupertino_icons: ^1.0.8
+  shared_preferences: ^2.5.6
+  image_picker: ^1.2.4
 
 # Packages used for testing and code quality
 dev_dependencies:
@@ -30,11 +32,10 @@ dev_dependencies:
 
 # Flutter configuration
 flutter:
-
-  # Enables Material Design icons
   uses-material-design: true
 
-  # Local product database
   assets:
     - assets/products.json
+    - assets/recipes.json
     - assets/images/concitologo.svg
+    - assets/images/recipes/
