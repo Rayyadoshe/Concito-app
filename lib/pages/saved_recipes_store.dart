@@ -1,38 +1,69 @@
-import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SavedRecipesStore {
   SavedRecipesStore._();
+
   static final SavedRecipesStore instance = SavedRecipesStore._();
-  static const _key = 'eco_tracker_saved_recipes_v1';
 
   final ValueNotifier<List<Map<String, dynamic>>> recipes =
   ValueNotifier<List<Map<String, dynamic>>>([]);
-  bool _loaded = false;
+
+  String? _loadedUserId;
 
   Future<void> load() async {
-    if (_loaded) return;
-    final prefs = await SharedPreferences.getInstance();
-    final raw = prefs.getString(_key);
-    if (raw != null) {
-      try {
-        recipes.value = (jsonDecode(raw) as List)
-            .map((item) => Map<String, dynamic>.from(item as Map))
-            .toList();
-      } catch (_) {
-        recipes.value = [];
-      }
+    final user = FirebaseAuth.instance.currentUser;
+
+    if (user == null) {
+      recipes.value = [];
+      _loadedUserId = null;
+      return;
     }
-    _loaded = true;
+
+    if (_loadedUserId == user.uid) return;
+
+    // Clear recipes from any previously logged-in user.
+    recipes.value = [];
+    _loadedUserId = null;
+
+    final snapshot = await FirebaseFirestore.instance
+        .collection('users')
+        .doc(user.uid)
+        .collection('recipes')
+        .get();
+
+    // Don't display another user's recipes if the account changed
+    // while the request was running.
+    if (FirebaseAuth.instance.currentUser?.uid != user.uid) return;
+
+    recipes.value = snapshot.docs.map((doc) {
+      return Map<String, dynamic>.from(doc.data());
+    }).toList();
+
+    _loadedUserId = user.uid;
   }
 
   Future<void> add(Map<String, dynamic> recipe) async {
+    final user = FirebaseAuth.instance.currentUser;
+
+    if (user == null) {
+      throw Exception('Please log in to save a recipe.');
+    }
+
     await load();
-    final updated = [...recipes.value, recipe];
-    final prefs = await SharedPreferences.getInstance();
-    final saved = await prefs.setString(_key, jsonEncode(updated));
-    if (!saved) throw Exception('Could not save recipe on this device.');
-    recipes.value = updated;
+
+    final recipeData = Map<String, dynamic>.from(recipe);
+
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(user.uid)
+        .collection('recipes')
+        .add(recipeData);
+
+    // Only update the current user's displayed recipes.
+    if (FirebaseAuth.instance.currentUser?.uid == user.uid) {
+      recipes.value = [...recipes.value, recipeData];
+    }
   }
 }

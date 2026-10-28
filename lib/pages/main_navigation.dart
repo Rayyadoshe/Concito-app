@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import 'calculator_page.dart';
 import 'recipes_page.dart';
+import 'account_page.dart';
 import '../calculator_product_selection.dart';
+import 'home_page.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
@@ -17,18 +19,27 @@ class _MainNavigationState extends State<MainNavigation> {
   @override
   Widget build(BuildContext context) {
     final pages = <Widget>[
-      const _PlaceholderPage(title: 'Home', message: 'Home page coming soon'),
-      ProductPage(onAddToCalculator: (product) {
-        calculatorProductSelection.value = product;
-        setState(() => selectedIndex = 2);
-      }),
+      HomePage(
+        onNavigate: (index) {
+          setState(() => selectedIndex = index);
+        },
+      ),
+      ProductPage(
+        onAddToCalculator: (product) {
+          calculatorProductSelection.value = product;
+          setState(() => selectedIndex = 2);
+        },
+      ),
       const CalculatorPage(),
       const RecipesPage(),
-      const _PlaceholderPage(title: 'My Account', message: 'User profile coming soon'),
+      const AccountPage(),
     ];
 
     return Scaffold(
-      body: IndexedStack(index: selectedIndex, children: pages),
+      body: IndexedStack(
+        index: selectedIndex,
+        children: pages,
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: selectedIndex,
         onDestinationSelected: (index) {
@@ -40,7 +51,10 @@ class _MainNavigationState extends State<MainNavigation> {
             selectedIcon: Icon(Icons.home),
             label: 'Home',
           ),
-          NavigationDestination(icon: Icon(Icons.search), label: 'Search'),
+          NavigationDestination(
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
           NavigationDestination(
             icon: Icon(Icons.calculate_outlined),
             selectedIcon: Icon(Icons.calculate),
@@ -66,7 +80,10 @@ class _PlaceholderPage extends StatelessWidget {
   final String title;
   final String message;
 
-  const _PlaceholderPage({required this.title, required this.message});
+  const _PlaceholderPage({
+    required this.title,
+    required this.message,
+  });
 
   @override
   Widget build(BuildContext context) {

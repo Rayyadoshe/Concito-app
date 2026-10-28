@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'create_recipe_page.dart';
 import '../calculator_product_selection.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 
 // Provisional ingredient-impact thresholds, based on the entered grams.
@@ -247,7 +249,81 @@ ScaffoldMessenger.of(context).showSnackBar(
 const SnackBar(content: Text('Ingredient added to meal!')),
 );
 }
+bool isTrackingMeal = false;
 
+Future<void> trackMeal() async {
+  if (mealIngredients.isEmpty || isTrackingMeal) return;
+
+  final user = FirebaseAuth.instance.currentUser;
+
+  if (user == null) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Please log in to track your meals.'),
+      ),
+    );
+    return;
+  }
+
+  final totalEmissions = totalMealEmissions;
+
+  final ingredients = mealIngredients.map((item) {
+    final product = item['product'] as Map<String, dynamic>;
+
+    return {
+      'productName': (product['name'] ?? '').toString(),
+      'grams': (item['grams'] as num).toDouble(),
+      'emissionsKg': (item['emissions'] as num).toDouble(),
+    };
+  }).toList();
+
+  setState(() {
+    isTrackingMeal = true;
+  });
+
+  try {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(user.uid)
+        .collection('meals')
+        .add({
+      'name': 'Tracked Meal',
+      'ingredients': ingredients,
+      'totalEmissionsKg': totalEmissions,
+      'createdAt': FieldValue.serverTimestamp(),
+    });
+
+    if (!mounted) return;
+
+    setState(() {
+      mealIngredients.clear();
+      selectedProduct = null;
+      calculatedEmissions = null;
+      gramsController.clear();
+    });
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Meal tracked successfully! 🌱'),
+        backgroundColor: Color(0xFF165B45),
+      ),
+    );
+  } catch (e) {
+    if (!mounted) return;
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Could not track meal: $e'),
+      ),
+    );
+  } finally {
+    if (mounted) {
+      setState(() {
+        isTrackingMeal = false;
+      });
+    }
+  }
+}
 Future<void> saveMealAsRecipe() async {
 if (mealIngredients.isEmpty) return;
 final ingredients = mealIngredients.map((item) {
@@ -535,6 +611,23 @@ icon: const Icon(Icons.bookmark_add_outlined),
 label: const Text('Save as Recipe'),
 ),
 ),
+  const SizedBox(height: 12),
+
+  SizedBox(
+    width: double.infinity,
+    child: ElevatedButton.icon(
+      onPressed: isTrackingMeal ? null : trackMeal,
+      icon: const Icon(Icons.eco_outlined),
+      label: Text(
+        isTrackingMeal ? 'Tracking Meal...' : 'Track Meal',
+      ),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF165B45),
+        foregroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(vertical: 16),
+      ),
+    ),
+  ),
 const SizedBox(height: 12),
 Card(
 color: const Color(0xFFE6F2EB),
